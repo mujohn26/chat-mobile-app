@@ -15,7 +15,6 @@ class MessagesScreen extends StatefulWidget {
 
 class _MessagesScreenState extends State<MessagesScreen> {
   final messagesController = Get.put(MessagesController());
-  late var _dropDownValue = 'Messages';
 
   @override
   void initState() {
@@ -40,12 +39,8 @@ class _MessagesScreenState extends State<MessagesScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xff7b7890)),
-          onPressed: () => {}
-        ),
         title: const Text(
-          'Messages',
+          'Chats',
           style: TextStyle(
               fontFamily: "Muli", fontSize: 25, color: Color(0xff7b7890)),
         ),

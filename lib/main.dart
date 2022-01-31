@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:mobile_chat/screens/messages/messages_screen.dart';
-
+import 'package:get/get.dart';
+import 'package:mobile_chat/components/bottom_navigation.dart';
 void main() {
-  runApp(const MyApp());
+  runApp( Homepage());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+class Homepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
+      title: "Chat",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MessagesScreen(),
+      home: BottomNavigation(),
     );
   }
 }
